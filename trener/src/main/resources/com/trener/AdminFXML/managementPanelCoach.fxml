@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trener.ControllersAdmin.ManagementPanelCoach">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #5d80b6;">
+         <children>
+            <Pane prefHeight="190.0" prefWidth="300.0" style="-fx-background-color: #101f5a;">
+               <children>
+                  <Label layoutX="72.0" layoutY="17.0" text="HealthBoost" textFill="WHITE">
+                     <font>
+                        <Font name="Chiller" size="45.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="70.0" fitWidth="176.0" layoutX="116.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" scaleX="1.4" scaleY="1.2">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="66.0" layoutY="109.0" text="Panel admina" textFill="WHITE">
+                     <font>
+                        <Font name="Chiller" size="45.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="menuBtn" mnemonicParsing="false" onAction="#mainMenuScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Menu główne">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconMainMenu" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="panelUserBtn" layoutX="10.0" layoutY="204.0" mnemonicParsing="false" onAction="#userPanelScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Zarządzaj użytkownikami">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconPanelUser" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="panelCoachBtn" layoutX="10.0" layoutY="274.0" mnemonicParsing="false" onAction="#panelCoachScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Zarządzaj trenerami">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconPanelCoach" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="logoutBtn" layoutX="10.0" layoutY="344.0" mnemonicParsing="false" onAction="#logout" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Wyloguj">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconLogout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="300.0" prefHeight="190.0" prefWidth="1000.0" style="-fx-background-color: #101f5a;">
+         <children>
+            <Label layoutX="190.0" layoutY="65.0" text="Panel zarządzania trenerami" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="55.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tableView" layoutX="430.0" layoutY="206.0" prefHeight="330.0" prefWidth="740.0" styleClass="AlignmentCenter" stylesheets="@../style.css">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="46.0" text="id" />
+            <TableColumn fx:id="colImie" prefWidth="120.0" text="Imię" />
+            <TableColumn fx:id="colNazwisko" prefWidth="142.0" text="Nazwisko" />
+            <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="161.0" text="Adres email" />
+            <TableColumn fx:id="colWeryfikacja" minWidth="0.0" prefWidth="177.0" text="Weryfikacja" />
+            <TableColumn fx:id="colRola" minWidth="0.0" prefWidth="90.0" text="Rola" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnDelete" layoutX="350.0" layoutY="564.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="50.0" prefWidth="250.0" stylesheets="@../style.css" text="Usuń">
+         <styleClass>
+            <String fx:value="button_size" />
+            <String fx:value="btnRed" />
+         </styleClass></Button>
+      <Button fx:id="btnChangeData" layoutX="1000.0" layoutY="564.0" mnemonicParsing="false" onAction="#changeData" prefHeight="50.0" prefWidth="250.0" stylesheets="@../style.css" text="Zmień dane">
+         <styleClass>
+            <String fx:value="button_size" />
+            <String fx:value="btnColorPrimary" />
+         </styleClass></Button>
+   </children>
+</AnchorPane>

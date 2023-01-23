@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trener.ControllersCoach.SettingsCoach">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="300.0">
+         <children>
+            <Pane prefHeight="144.0" prefWidth="300.0" style="-fx-background-color: #101f5a;">
+               <children>
+                  <Label layoutX="71.0" layoutY="15.0" text="HealthBoost" textFill="WHITE">
+                     <font>
+                        <Font name="Chiller" size="45.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="70.0" fitWidth="176.0" layoutX="115.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" scaleX="1.4" scaleY="1.2">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="menuBtn" mnemonicParsing="false" onAction="#mainMenuScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Menu główne">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconMainMenu" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="dodajPlanBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addPlanScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Dodaj plan treningowy">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconAddPlan" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="modyfikujPlanBtn" layoutX="10.0" layoutY="47.0" mnemonicParsing="false" onAction="#updatePlanScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Modyfikuj plan treningowy">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconModifyPlan" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="modyfikujCwiczeniaBtn" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" onAction="#exercisesScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Modyfikuj ćwiczenia">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconModifyExercise" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="statystykiBtn" layoutX="10.0" layoutY="121.0" mnemonicParsing="false" onAction="#statisticsScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Statystyki podopiecznego">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconStatisticsUser" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="ustawieniaBtn" layoutX="10.0" layoutY="158.0" mnemonicParsing="false" onAction="#settingsScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Ustawienia">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconSettings" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="infoBtn" layoutX="10.0" layoutY="195.0" mnemonicParsing="false" onAction="#aboutAppScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="O aplikacji">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconAboutApp" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="wylogujBtn" layoutX="10.0" layoutY="232.0" mnemonicParsing="false" onAction="#logout" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Wyloguj">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconLogout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="300.0" prefHeight="143.0" prefWidth="902.0" style="-fx-background-color: #101f5a;">
+         <children>
+            <Label layoutX="327.0" layoutY="41.0" text="Ustawienia" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="55.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtImie" disable="true" layoutX="342.0" layoutY="218.0" prefHeight="45.0" prefWidth="500.0" styleClass="size24" stylesheets="@../style.css">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </TextField>
+      <Label layoutX="342.0" layoutY="173.0" text="Imię">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNazwisko" disable="true" layoutX="342.0" layoutY="339.0" prefHeight="45.0" prefWidth="500.0" styleClass="size24" stylesheets="@../style.css">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </TextField>
+      <Label layoutX="342.0" layoutY="294.0" text="Nazwisko">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" disable="true" layoutX="342.0" layoutY="543.0" prefHeight="45.0" prefWidth="500.0" styleClass="size24" stylesheets="@../style.css">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </TextField>
+      <Label layoutX="342.0" layoutY="498.0" text="Email">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnZmienDanePersonalne" layoutX="342.0" layoutY="404.0" mnemonicParsing="false" onAction="#changePersonalData" prefHeight="45.0" prefWidth="500.0" stylesheets="@../style.css" text="Zmień dane personalne">
+         <styleClass>
+            <String fx:value="button_size" />
+            <String fx:value="btnColorPrimary" />
+         </styleClass></Button>
+      <Button fx:id="btnZmienEmail" layoutX="870.0" layoutY="543.0" mnemonicParsing="false" onAction="#changeEmail" prefHeight="45.0" prefWidth="261.0" stylesheets="@../style.css" text="Zmień adres email">
+         <styleClass>
+            <String fx:value="button_size" />
+            <String fx:value="btnColorPrimary" />
+         </styleClass></Button>
+      <Button fx:id="btnZmienHaslo" layoutX="342.0" layoutY="628.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="45.0" prefWidth="500.0" stylesheets="@../style.css" text="Zmień hasło">
+         <styleClass>
+            <String fx:value="button_size" />
+            <String fx:value="btnColorPrimary" />
+         </styleClass></Button>
+   </children>
+</AnchorPane>

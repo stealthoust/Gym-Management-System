@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trener.ControllersCoach.AddTrainingPlan">
+   <children>
+      <Pane layoutX="300.0" prefHeight="143.0" prefWidth="902.0" style="-fx-background-color: #101f5a;">
+         <children>
+            <Label layoutX="38.0" layoutY="41.0" text="Panel dodawania planu treningowego" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="55.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="310.0" layoutY="160.0" maxWidth="1.7976931348623157E308" prefHeight="510.0" prefWidth="880.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="891.0" prefWidth="867.0">
+               <children>
+                  <ComboBox fx:id="comboKategoria" layoutX="15.0" layoutY="123.0" onAction="#displayExercises" prefHeight="31.0" prefWidth="209.0" promptText="Kategoria" />
+                  <ComboBox fx:id="comboPodopieczni" layoutX="441.0" layoutY="123.0" prefHeight="31.0" prefWidth="209.0" promptText="Podopieczny" />
+                  <Label layoutX="21.0" layoutY="183.0" prefHeight="18.0" prefWidth="372.0" text="Ćwiczenia">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="449.0" layoutY="183.0" prefHeight="18.0" prefWidth="372.0" text="Plan treningowy">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tabelaCwiczeniaDatabase" layoutX="12.0" layoutY="214.0" maxWidth="-Infinity" prefHeight="330.0" prefWidth="410.0" stylesheets="@../style.css">
+                     <columns>
+                        <TableColumn fx:id="cwiczeniaColId" prefWidth="60.0" text="ID" />
+                        <TableColumn fx:id="cwiczeniaColNazwa" prefWidth="384.0" text="Nazwa ćwiczenia" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="tabelaPlanTreningowy" layoutX="441.0" layoutY="214.0" maxWidth="-Infinity" prefHeight="330.0" prefWidth="412.0" stylesheets="@../style.css">
+                     <columns>
+                        <TableColumn fx:id="planColId" prefWidth="57.0" text="ID" />
+                        <TableColumn fx:id="planColNazwa" prefWidth="387.0" text="Nazwa ćwiczenia" />
+                     </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="21.0" layoutY="35.0" prefHeight="27.0" prefWidth="247.0" text="Nazwa planu">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNazwa" layoutX="270.0" layoutY="34.0" prefHeight="30.0" prefWidth="360.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="24.0" layoutY="641.0" prefHeight="27.0" prefWidth="260.0" text="Zalecenia i uwagi">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtOpis" layoutX="12.0" layoutY="668.0" prefHeight="91.0" prefWidth="796.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="btnDodajCwiczenie" layoutX="35.0" layoutY="568.0" mnemonicParsing="false" onAction="#addExercise" prefHeight="35.0" prefWidth="175.0" stylesheets="@../style.css" text="Dodaj ćwiczenie">
+                     <styleClass>
+                        <String fx:value="btnColorPrimary" />
+                        <String fx:value="button_size" />
+                     </styleClass></Button>
+                  <Button fx:id="btnUsunCwiczenie" layoutX="235.0" layoutY="568.0" mnemonicParsing="false" onAction="#deleteExercise" prefHeight="35.0" prefWidth="175.0" stylesheets="@../style.css" text="Usuń ćwiczenie">
+                     <styleClass>
+                        <String fx:value="btnColorPrimary" />
+                        <String fx:value="button_size" />
+                     </styleClass></Button>
+                  <Button fx:id="btnPrzeniesUp" layoutX="435.0" layoutY="568.0" mnemonicParsing="false" onAction="#exerciseUp" prefHeight="35.0" prefWidth="175.0" stylesheets="@../style.css" text="Przenieś w górę">
+                     <styleClass>
+                        <String fx:value="btnColorPrimary" />
+                        <String fx:value="button_size" />
+                     </styleClass></Button>
+                  <Button fx:id="btnPrzeniesDown" layoutX="635.0" layoutY="568.0" mnemonicParsing="false" onAction="#exerciseDown" prefHeight="35.0" prefWidth="175.0" stylesheets="@../style.css" text="Przenieś w dół">
+                     <styleClass>
+                        <String fx:value="btnColorPrimary" />
+                        <String fx:value="button_size" />
+                     </styleClass></Button>
+                  <Button fx:id="btnDodajPlan" alignment="CENTER" layoutX="48.0" layoutY="788.0" mnemonicParsing="false" onAction="#addTainingPlan" prefHeight="46.0" prefWidth="775.0" stylesheets="@../style.css" text="Dodaj plan">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btnGreen" />
+                        <String fx:value="button_size" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <VBox prefHeight="700.0" prefWidth="300.0">
+         <children>
+            <Pane prefHeight="144.0" prefWidth="300.0" style="-fx-background-color: #101f5a;">
+               <children>
+                  <Label layoutX="71.0" layoutY="15.0" text="HealthBoost" textFill="WHITE">
+                     <font>
+                        <Font name="Chiller" size="45.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="70.0" fitWidth="176.0" layoutX="115.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" scaleX="1.4" scaleY="1.2">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="menuBtn" mnemonicParsing="false" onAction="#mainMenuScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Menu główne">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconMainMenu" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="dodajPlanBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addPlanScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Dodaj plan treningowy">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconAddPlan" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="modyfikujPlanBtn" layoutX="10.0" layoutY="47.0" mnemonicParsing="false" onAction="#updatePlanScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Modyfikuj plan treningowy">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconModifyPlan" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="modyfikujCwiczeniaBtn" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" onAction="#exercisesScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Modyfikuj ćwiczenia">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconModifyExercise" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="statystykiBtn" layoutX="10.0" layoutY="121.0" mnemonicParsing="false" onAction="#statisticsScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Statystyki podopiecznego">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconStatisticsUser" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="ustawieniaBtn" layoutX="10.0" layoutY="158.0" mnemonicParsing="false" onAction="#settingsScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Ustawienia">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconSettings" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="infoBtn" layoutX="10.0" layoutY="195.0" mnemonicParsing="false" onAction="#aboutAppScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="O aplikacji">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconAboutApp" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="wylogujBtn" layoutX="10.0" layoutY="232.0" mnemonicParsing="false" onAction="#logout" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Wyloguj">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconLogout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

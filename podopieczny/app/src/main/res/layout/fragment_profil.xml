@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeprofil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ProfilFragment">
+<ScrollView
+    android:id="@+id/scrollprofil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ProfilFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/xlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv27"
+            android:layout_width="337dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Wybierz swojego trenera"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerCel_ustawienia" />
+
+        <TextView
+            android:id="@+id/tv26"
+            android:layout_width="337dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Wybierz swój cel"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTryb_ustawienia" />
+
+        <TextView
+            android:id="@+id/tv24"
+            android:layout_width="337dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Wybierz rodzaj aktywności"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_wzrost_ustawienia" />
+
+        <TextView
+            android:id="@+id/tv23"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Wzrost:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_wzrost_ustawienia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Płeć:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerPlec_ustawienia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv20" />
+
+        <TextView
+            android:id="@+id/tv20"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Obecna waga:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_waga_obecna_ustawienia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <EditText
+            android:id="@+id/et_waga_obecna_ustawienia"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="obecna waga"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <Spinner
+            android:id="@+id/spinnerTrener_ustawienia"
+            android:layout_width="337dp"
+            android:layout_height="70sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv27" />
+
+        <EditText
+            android:id="@+id/et_wzrost_ustawienia"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="wzrost"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPlec_ustawienia" />
+
+        <Spinner
+            android:id="@+id/spinnerPlec_ustawienia"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_waga_obecna_ustawienia" />
+
+        <Spinner
+            android:id="@+id/spinnerCel_ustawienia"
+            android:layout_width="337dp"
+            android:layout_height="70sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv26" />
+
+        <Spinner
+            android:id="@+id/spinnerTryb_ustawienia"
+            android:layout_width="337dp"
+            android:layout_height="70sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv24" />
+
+        <Button
+            android:id="@+id/btn_zatwierdz_ustawienia"
+            android:layout_width="337dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:text="Zmień"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTrener_ustawienia" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Informacje dotyczące profilu"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/right_divider" />
+
+        <View
+            android:id="@+id/right_divider"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="30dp"
+            android:background="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profil_plany" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:soundEffectsEnabled="false"
+            android:text="Statystyki"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_profil_trening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Brak danych o treningu"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profil_kalorie" />
+
+        <TextView
+            android:id="@+id/tv_profil_kalorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Brak danych dotyczących pozostałych kalorii"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/tv_profil_ilosc_rok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="brak danych na temat ilości treningów"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profil_trening" />
+
+        <TextView
+            android:id="@+id/tv_profil_plany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Brak danych na temat planów treningowych"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profil_ilosc_rok" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

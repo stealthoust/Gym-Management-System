@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RejestracjaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/clayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_login_reg"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="130dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_haslo_reg"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_login_reg" />
+
+        <EditText
+            android:id="@+id/et_pow_haslo_reg"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_haslo_reg" />
+
+        <EditText
+            android:id="@+id/et_imie_reg"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="20dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pow_haslo_reg" />
+
+        <EditText
+            android:id="@+id/et_nazwisko_reg"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="20dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_imie_reg" />
+
+        <EditText
+            android:id="@+id/et_email_reg"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_nazwisko_reg" />
+
+        <EditText
+            android:id="@+id/et_pow_email_reg"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_email_reg" />
+
+        <EditText
+            android:id="@+id/et_telefon_reg"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pow_email_reg" />
+
+        <TextView
+            android:id="@+id/tv_data_reg"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:hint="kliknij aby ustalić datę"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_telefon_reg" />
+
+        <TextView
+            android:id="@+id/tv_powrot_log"
+            android:layout_width="330dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="30dp"
+            android:text="Wróć do logowania"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ageError" />
+
+        <Button
+            android:id="@+id/btn_zarejestruj"
+            android:layout_width="350dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:text="Zarejestruj"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_powrot_log"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Data urodzenia:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_data_reg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Telefon (opcjonalnie)"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_telefon_reg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Powtórz e-mail:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_pow_email_reg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="E-mail:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_email_reg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Nazwisko:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_nazwisko_reg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Imię:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_imie_reg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Powtórz hasło:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_pow_haslo_reg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dieta_row_kalorie" />
+
+        <TextView
+            android:id="@+id/dieta_row_kalorie"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Hasło:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_haslo_reg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="107dp"
+            android:layout_height="50sp"
+            android:layout_marginTop="130dp"
+            android:gravity="center"
+            android:text="Login:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_login_reg"
+            app:layout_constraintHorizontal_bias="0.569"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="220sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/times"
+            android:gravity="center"
+            android:text="Rejestracja"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewRegister"
+            android:layout_width="80dp"
+            android:layout_height="38dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/ageError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:enabled="false"
+            android:text="Musisz być między 15 a 70 rokiem życia!"
+            android:textColor="#C9EC3535"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_data_reg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
+
+
+

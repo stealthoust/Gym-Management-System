@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #acbcd3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trener.ControllersCoach.LoginController">
+   <children>
+      <TextField fx:id="tf_login_log" layoutX="196.0" layoutY="310.0" prefHeight="44.0" prefWidth="328.0" styleClass="loginInput" stylesheets="@../style.css">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="tf_haslo_log" layoutX="196.0" layoutY="403.0" prefHeight="44.0" prefWidth="328.0" styleClass="loginInput" stylesheets="@../style.css">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="btn_zaloguj" layoutX="186.0" layoutY="583.0" mnemonicParsing="false" onAction="#logInMethod" prefHeight="44.0" prefWidth="328.0" styleClass="btnGlobal" stylesheets="@../style.css" text="Zaloguj">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Label layoutX="98.0" layoutY="319.0" text="Login">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="407.0" text="Hasło">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_wroc_do_rejestracji" alignment="CENTER" layoutX="75.0" layoutY="526.0" onMouseClicked="#switchToRegisterForm" prefHeight="35.0" prefWidth="550.0" styleClass="labelLink" stylesheets="@../style.css" text="Nie masz konta? Zarejestruj się!" textFill="BLUE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="90.0" layoutY="221.0" prefHeight="35.0" prefWidth="543.0" text="Logowanie" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="logo" fitHeight="208.0" fitWidth="208.0" layoutX="258.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" scaleX="1.1">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="197.0" layoutY="22.0" prefHeight="90.0" prefWidth="328.0" text="HealthBoost">
+         <font>
+            <Font name="Chiller" size="60.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_forget" alignment="CENTER" layoutX="75.0" layoutY="474.0" onMouseClicked="#forgotPassword" prefHeight="35.0" prefWidth="550.0" styleClass="labelLink" stylesheets="@../style.css" text="Zapomniałeś loginu lub hasła?" textFill="BLUE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

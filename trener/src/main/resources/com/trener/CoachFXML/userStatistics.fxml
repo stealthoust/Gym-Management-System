@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trener.ControllersCoach.UserStatistics">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="300.0">
+         <children>
+            <Pane prefHeight="144.0" prefWidth="300.0" style="-fx-background-color: #101f5a;">
+               <children>
+                  <Label layoutX="71.0" layoutY="15.0" text="HealthBoost" textFill="WHITE">
+                     <font>
+                        <Font name="Chiller" size="45.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="70.0" fitWidth="176.0" layoutX="115.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" scaleX="1.4" scaleY="1.2">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="menuBtn" mnemonicParsing="false" onAction="#mainMenuScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Menu główne">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconMainMenu" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="dodajPlanBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addPlanScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Dodaj plan treningowy">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconAddPlan" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="modyfikujPlanBtn" layoutX="10.0" layoutY="47.0" mnemonicParsing="false" onAction="#updatePlanScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Modyfikuj plan treningowy">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconModifyPlan" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="modyfikujCwiczeniaBtn" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" onAction="#exercisesScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Modyfikuj ćwiczenia">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconModifyExercise" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="statystykiBtn" layoutX="10.0" layoutY="121.0" mnemonicParsing="false" onAction="#statisticsScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Statystyki podopiecznego">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconStatisticsUser" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="ustawieniaBtn" layoutX="10.0" layoutY="158.0" mnemonicParsing="false" onAction="#settingsScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Ustawienia">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconSettings" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="infoBtn" layoutX="10.0" layoutY="195.0" mnemonicParsing="false" onAction="#aboutAppScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="O aplikacji">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconAboutApp" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="wylogujBtn" layoutX="10.0" layoutY="232.0" mnemonicParsing="false" onAction="#logout" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Wyloguj">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconLogout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="300.0" prefHeight="143.0" prefWidth="902.0" style="-fx-background-color: #101f5a;">
+         <children>
+            <Label layoutX="168.0" layoutY="41.0" text="Statystyki podopiecznego" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="55.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ComboBox fx:id="comboPodopieczny" layoutX="325.0" layoutY="164.0" onAction="#setStatistics" prefHeight="35.0" prefWidth="220.0" promptText="Podopieczni" />
+      <ScrollPane layoutX="311.0" layoutY="210.0" prefHeight="476.0" prefWidth="880.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1294.0" prefWidth="866.0">
+               <children>
+                  <TableView fx:id="tableView" layoutX="27.0" layoutY="23.0" prefHeight="76.0" prefWidth="820.0" styleClass="AlignmentCenter" stylesheets="@../style.css">
+                     <columns>
+                        <TableColumn fx:id="colWaga" prefWidth="102.0" text="Aktualna waga" />
+                        <TableColumn fx:id="colWzrost" prefWidth="65.0" text="Wzrost" />
+                        <TableColumn fx:id="colAktywnosc" prefWidth="348.0000305175781" text="Aktywność fizyczna" />
+                        <TableColumn fx:id="colCel" minWidth="0.0" prefWidth="296.0" text="Cel" />
+                     </columns>
+                  </TableView>
+                  <Label fx:id="txtLiczbaTreningow" alignment="CENTER" layoutX="27.0" layoutY="149.0" prefHeight="35.0" prefWidth="820.0" text="Liczba treningów w przedziale tydzień/miesiąc/rok :">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="pieChart" animated="false" layoutX="24.0" layoutY="222.0" prefHeight="250.0" prefWidth="820.0" title="Podział zanotowanych treningów na aktywne plany treningowe" />
+                  <BarChart fx:id="barChart" animated="false" layoutX="24.0" layoutY="532.0" prefHeight="250.0" prefWidth="820.0" title="Spożyte kalorie w ostatnich 7 dniach">
+                     <xAxis>
+                        <CategoryAxis label="Dzień tygodnia" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis label="Liczba kcal" side="LEFT" />
+                     </yAxis>
+                  </BarChart>
+                  <LineChart fx:id="lineChart" animated="false" layoutX="24.0" layoutY="833.0" prefHeight="400.0" prefWidth="820.0" title="Historia wagi">
+                     <xAxis>
+                        <CategoryAxis label="Data" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis label="Waga" side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

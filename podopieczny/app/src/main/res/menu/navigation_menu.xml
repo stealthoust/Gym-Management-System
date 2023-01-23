@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/linia"
+        android:checkableBehavior="single" >
+    <item android:id="@+id/menuProfile"
+        android:icon="@drawable/user"
+        android:title="@string/profil"
+        />
+    </group>
+    <item
+        android:title="Strefa treningu">
+        <menu>
+    <group
+        android:id="@+id/linia1"
+        android:checkableBehavior="single">
+    <item android:id="@+id/menuPlan"
+        android:icon="@drawable/plan_treningowy"
+        android:title="Plan treningowy"/>
+
+
+    <item android:id="@+id/menuTrening"
+        android:icon="@drawable/treningi"
+        android:title="Treningi"/>
+
+    </group>
+        </menu>
+    </item>
+    <item
+        android:title="Strefa odżywiania">
+        <menu>
+            <group
+                android:id="@+id/linia2"
+                android:checkableBehavior="single">
+    <item android:id="@+id/menuDieta"
+        android:icon="@drawable/dieta"
+        android:title="Dieta"/>
+
+    <item android:id="@+id/menuPomiar"
+        android:icon="@drawable/pomiar_wagi"
+        android:title="Pomiar wagi"/>
+            </group>
+        </menu>
+    </item>
+    <group
+        android:id="@+id/linia3"
+        android:checkableBehavior="single">
+    <item android:id="@+id/menuUstawienia"
+        android:icon="@drawable/ustawienia"
+        android:title="Ustawienia"/>
+        <item android:id="@+id/menuInfo"
+            android:icon="@drawable/info"
+            android:title="O aplikacji"/>
+        <item android:id="@+id/menuWyloguj"
+            android:icon="@drawable/wyloguj"
+            android:title="Wyloguj"/>
+    </group>
+
+</menu>

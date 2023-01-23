@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trener.ControllersAdmin.MainMenuAdmin">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #5d80b6;">
+         <children>
+            <Pane prefHeight="190.0" prefWidth="300.0" style="-fx-background-color: #101f5a;">
+               <children>
+                  <Label layoutX="72.0" layoutY="17.0" text="HealthBoost" textFill="WHITE">
+                     <font>
+                        <Font name="Chiller" size="45.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="70.0" fitWidth="176.0" layoutX="116.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" scaleX="1.4" scaleY="1.2">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="66.0" layoutY="109.0" text="Panel admina" textFill="WHITE">
+                     <font>
+                        <Font name="Chiller" size="45.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="menuBtn" mnemonicParsing="false" onAction="#mainMenuScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Menu główne">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconMainMenu" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="panelUserBtn" layoutX="10.0" layoutY="204.0" mnemonicParsing="false" onAction="#userPanelScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Zarządzaj użytkownikami">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconPanelUser" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="panelCoachBtn" layoutX="10.0" layoutY="274.0" mnemonicParsing="false" onAction="#panelCoachScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Zarządzaj trenerami">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconPanelCoach" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="logoutBtn" layoutX="10.0" layoutY="344.0" mnemonicParsing="false" onAction="#logout" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Wyloguj">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconLogout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="300.0" prefHeight="190.0" prefWidth="1000.0" style="-fx-background-color: #101f5a;">
+         <children>
+            <Label layoutX="348.0" layoutY="65.0" text="Menu główne" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="55.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="labelUsers" layoutX="388.0" layoutY="433.0" prefHeight="35.0" prefWidth="838.0" text="Liczba użytkowników systemu : x (y aktywnych)">
+         <font>
+            <Font name="Times New Roman Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelUnverifiedCoach" layoutX="388.0" layoutY="483.0" prefHeight="35.0" prefWidth="838.0" text="Liczba niezweryfikowanych trenerów :">
+         <font>
+            <Font name="Times New Roman Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVerifiedCoach" layoutX="388.0" layoutY="533.0" prefHeight="35.0" prefWidth="838.0" text="Liczba zweryfikowanych trenerów :">
+         <font>
+            <Font name="Times New Roman Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTrainings" layoutX="388.0" layoutY="583.0" prefHeight="35.0" prefWidth="838.0" text="Liczba wykonanych dzisiaj treningów :">
+         <font>
+            <Font name="Times New Roman Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelMeasurements" layoutX="388.0" layoutY="633.0" prefHeight="35.0" prefWidth="838.0" text="Liczba wykonanych dzisiaj pomiarów wagi :">
+         <font>
+            <Font name="Times New Roman Italic" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="iconUser" fitHeight="40.0" fitWidth="50.0" layoutX="335.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="368.0" layoutY="208.0" prefHeight="84.0" prefWidth="838.0" text="Informacje dotyczące systemu&#10;&#9;&#9;HealthBoost">
+         <font>
+            <Font name="Times New Roman Italic" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="205.0" fitWidth="426.0" layoutX="700.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconCoachUnverified" fitHeight="40.0" fitWidth="50.0" layoutX="335.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iconCoachVerified" fitHeight="40.0" fitWidth="50.0" layoutX="335.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iconTrainingsCount" fitHeight="40.0" fitWidth="50.0" layoutX="335.0" layoutY="583.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iconMeasurement" fitHeight="40.0" fitWidth="50.0" layoutX="335.0" layoutY="633.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

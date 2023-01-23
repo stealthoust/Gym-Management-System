@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuProfile">
+
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="my.app.Fragments.ProfilFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profil"/>
+
+    <fragment
+        android:id="@+id/menuPlan"
+        android:name="my.app.Fragments.PlanTreningowyFragment"
+        android:label="Plan treningowy"
+        tools:layout="@layout/fragment_plan_treningowy"/>
+
+    <fragment
+        android:id="@+id/menuTrening"
+        android:name="my.app.Fragments.TreningFragment"
+        android:label="Treningi"
+        tools:layout="@layout/fragment_trening"/>
+
+    <fragment
+        android:id="@+id/menuDieta"
+        android:name="my.app.Fragments.DietaFragment"
+        android:label="Dieta"
+        tools:layout="@layout/fragment_dieta" />
+    <fragment
+        android:id="@+id/menuPomiar"
+        android:name="my.app.Fragments.PomiarFragment"
+        android:label="Twoje pomiary"
+        tools:layout="@layout/fragment_pomiar" />
+    <fragment
+        android:id="@+id/menuInfo"
+        android:name="my.app.Fragments.InfoFragment"
+        android:label="Informacje o aplikacji"
+        tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/menuUstawienia"
+        android:name="my.app.Fragments.UstawieniaFragment"
+        android:label="Ustawienia"
+        tools:layout="@layout/fragment_ustawienia" />
+
+</navigation>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trener.ControllersCoach.AboutApp">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="300.0">
+         <children>
+            <Pane prefHeight="144.0" prefWidth="300.0" style="-fx-background-color: #101f5a;">
+               <children>
+                  <Label layoutX="71.0" layoutY="15.0" text="HealthBoost" textFill="WHITE">
+                     <font>
+                        <Font name="Chiller" size="45.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="70.0" fitWidth="176.0" layoutX="115.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" scaleX="1.4" scaleY="1.2">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="menuBtn" mnemonicParsing="false" onAction="#mainMenuScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Menu główne">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconMainMenu" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="dodajPlanBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addPlanScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Dodaj plan treningowy">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconAddPlan" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="modyfikujPlanBtn" layoutX="10.0" layoutY="47.0" mnemonicParsing="false" onAction="#updatePlanScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Modyfikuj plan treningowy">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconModifyPlan" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="modyfikujCwiczeniaBtn" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" onAction="#exercisesScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Modyfikuj ćwiczenia">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconModifyExercise" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="statystykiBtn" layoutX="10.0" layoutY="121.0" mnemonicParsing="false" onAction="#statisticsScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Statystyki podopiecznego">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconStatisticsUser" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="ustawieniaBtn" layoutX="10.0" layoutY="158.0" mnemonicParsing="false" onAction="#settingsScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Ustawienia">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconSettings" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="infoBtn" layoutX="10.0" layoutY="195.0" mnemonicParsing="false" onAction="#aboutAppScene" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="O aplikacji">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconAboutApp" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="wylogujBtn" layoutX="10.0" layoutY="232.0" mnemonicParsing="false" onAction="#logout" prefHeight="70.0" prefWidth="300.0" styleClass="btnMenu" stylesheets="@../style.css" text="Wyloguj">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="iconLogout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="300.0" prefHeight="143.0" prefWidth="902.0" style="-fx-background-color: #101f5a;">
+         <children>
+            <Label layoutX="330.0" layoutY="41.0" text="O aplikacji" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="55.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="321.0" layoutY="168.0" prefHeight="518.0" prefWidth="860.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="786.0" prefWidth="845.0">
+               <children>
+                  <ImageView fx:id="logoImg" fitHeight="134.0" fitWidth="206.0" layoutX="387.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" scaleX="1.4">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="158.0" layoutY="155.0" prefHeight="107.0" prefWidth="608.0" text="W razie problemów skontaktuj się z  naszym supportem.&#10;Email: prezentacja.silownia@gmail.com&#10;&#10;">
+                     <font>
+                        <Font name="Times New Roman" size="24.0" />
+                     </font>
+                  </Label>
+                  <Line endX="430.0" endY="-7.0" layoutX="424.0" layoutY="299.0" startX="-455.1000061035156" />
+                  <ImageView fx:id="fsImg" fitHeight="100.0" fitWidth="158.0" layoutX="403.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5">
+                     <image>
+                        <Image url="@../images/fs.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="232.0" layoutY="421.0" prefHeight="36.0" prefWidth="443.0" text="Atlas ćwiczeń zaczerpnięty ze strony :&#10;">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink layoutX="348.0" layoutY="457.0" onAction="#openFsBrowser" text="https://www.fabrykasily.pl/">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Line endX="430.0" endY="-9.0" layoutX="424.0" layoutY="531.0" startX="-455.1000061035156" />
+                  <ImageView fx:id="iconsImg" fitHeight="100.0" fitWidth="150.0" layoutX="404.0" layoutY="553.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="304.0" layoutY="653.0" prefHeight="36.0" prefWidth="300.0" text="Wykorzystane ikony">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink layoutX="381.0" layoutY="697.0" onAction="#openIconsBrowser" text="https://icons8.com">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Label layoutX="339.0" layoutY="37.0" text="HealthBoost">
+                     <font>
+                        <Font name="Chiller" size="64.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

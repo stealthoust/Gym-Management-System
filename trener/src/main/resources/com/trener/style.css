@@ -1,0 +1,103 @@
+.tferror {
+    -fx-text-box-border: red ;
+    -fx-focus-color: red ;
+}
+.tfvalid {
+    -fx-text-box-border: green ;
+    -fx-focus-color: green ;
+}
+.column-header.leftAlignedTableColumnHeader > .label {
+    -fx-alignment: center-left;
+}
+
+.button_size{
+    -fx-font-size:18px;
+    -fx-background-radius: 22;
+}
+.size24{
+    -fx-font-size:24px;
+}
+
+.AlignmentCenter{
+    -fx-alignment: center;
+}
+
+
+.btnMenu
+{
+    -fx-background-color: #5d80b6;
+    -fx-font-size:18px;
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+}
+
+.btnMenu:hover
+{
+    -fx-background-color: #acbcd3;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.btnMenu:pressed
+{
+    -fx-background-color: #101f5a;
+    -fx-text-fill: white;
+}
+
+.loginInput
+{
+    -fx-border-color: #101f5a;
+    -fx-font-size:24px;
+}
+.scrollPane
+{
+    -fx-background-color:#acbcd3;
+    -fx-background:#acbcd3;
+}
+.btnGlobal
+{   -fx-font-size: 24px;
+    -fx-background-radius: 22;
+    -fx-text-fill: white;
+    -fx-background-color: #5d80b6;
+}
+.btnGlobal:hover
+{
+    -fx-background-color: #101f5a;
+    -fx-font-weight: bold;
+}
+
+.labelLink:hover
+{
+    -fx-font-weight: bold;
+}
+.btnGreen
+{
+-fx-background-color:  #22870b;
+-fx-text-fill: white;
+}
+.btnColorPrimary
+{
+    -fx-background-color: #5d80b6;
+    -fx-text-fill: white;
+}
+.btnGreen:hover
+{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.btnColorPrimary:hover
+{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.btnRed
+{
+    -fx-background-color:  #a31717;
+    -fx-text-fill: white;
+}
+.btnRed:hover
+{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

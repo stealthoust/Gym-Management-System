@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/drawable/error.xml" value="0.304" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/drawable/green.xml" value="0.197" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/drawable/ic_baseline_menu.xml" value="0.2915" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/drawable/normal.xml" value="0.304" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/drawable/round.xml" value="0.343" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/activity_ustawienia.xml" value="0.2573749465583583" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/add_product.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/change_password_dialog.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/cwiczenie_row.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/dieta_row.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/exercise_detail.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/forgot_dialog.xml" value="0.3056861906797777" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/fragment_cele.xml" value="0.5541666666666667" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/fragment_dieta.xml" value="0.5432098765432098" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/fragment_info.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/fragment_plan_treningowy.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/fragment_pomiar.xml" value="0.5541666666666667" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/fragment_profil.xml" value="0.46954986760812" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/fragment_trening.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/fragment_ustawienia.xml" value="0.5541666666666667" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/layout_navigation_header.xml" value="0.31354166666666666" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/login.xml" value="0.5541666666666667" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/main_menu.xml" value="0.31354166666666666" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/pomiar_row.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/product_100g.xml" value="0.40480507706255664" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/product_dialog.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/register.xml" value="0.5" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/rejestracja.xml" value="0.3790931989924433" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/trening_row.xml" value="0.4548952543822146" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/layout/weryfikacja.xml" value="0.49739000745712153" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/menu/navigation_menu.xml" value="0.5" />
+        <entry key="..\:/Github/system-zarzadzania-podopiecznymi/podopieczny/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.343" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
